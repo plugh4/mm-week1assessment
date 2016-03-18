@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="width" constant="40" id="4zF-b7-8KU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iat-XY-Qnd" userLabel="calculateButton">
@@ -80,7 +80,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Web"/>
                                 <connections>
-                                    <action selector="onWebButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYQ-k9-Hpb"/>
                                     <segue destination="Xir-LU-fYy" kind="show" identifier="button" id="eo9-lI-8iy"/>
                                 </connections>
                             </button>
@@ -88,7 +87,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="masterView" destination="8bC-Xf-vdC" id="cpw-w1-khu"/>
-                        <outlet property="navitem" destination="d2N-Yt-Aed" id="0jt-el-cs7"/>
                         <outlet property="value1Text" destination="oYT-8E-OYh" id="4hI-s7-fXd"/>
                         <outlet property="value2Text" destination="Hum-5n-qOk" id="Hvf-eY-khS"/>
                         <outlet property="webButton" destination="buN-Oq-0eA" id="Ker-Tn-ZaC"/>

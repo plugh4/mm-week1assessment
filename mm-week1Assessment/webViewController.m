@@ -30,6 +30,27 @@
     [self loadWebPage:defaultURL];
 }
 
+
+#pragma mark - UIWebViewDelegate
+
+
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    //NSLog(@"didStartLoad()");
+    [self.spinner startAnimating];
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    //NSLog(@"didFinishLoad()");
+    [self.spinner stopAnimating];
+}
+- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    //NSLog(@"didFailLoadWithError()");
+    [self.spinner stopAnimating];
+}
+
+
+#pragma mark - Helpers
+
+
 - (void) loadWebPage:(NSString *)urlAsString {
     if (![urlAsString containsString:@"http://"]) {
         urlAsString = [NSString stringWithFormat:@"http://%@", urlAsString];
@@ -37,32 +58,5 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlAsString]];
     [self.webView loadRequest:request];
 }
-
-
-#pragma mark - UIWebViewDelegate
-
--(void)webViewDidStartLoad:(UIWebView *)webView{
-    NSLog(@"didStartLoad()");
-    [self.spinner startAnimating];
-}
--(void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSLog(@"didFinishLoad()");
-    [self.spinner stopAnimating];
-}
-- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    NSLog(@"didFailLoadWithError()");
-    [self.spinner stopAnimating];
-}
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

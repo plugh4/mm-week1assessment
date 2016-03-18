@@ -10,28 +10,26 @@
 #import "webViewController.h"
 
 @interface ViewController ()
-
 @property (strong, nonatomic) IBOutlet UIView *masterView;
-
-@property (weak, nonatomic) IBOutlet UINavigationItem *navitem;
 @property (weak, nonatomic) IBOutlet UIButton *webButton;
-
 @property (weak, nonatomic) IBOutlet UITextField *value1Text;
 @property (weak, nonatomic) IBOutlet UITextField *value2Text;
-
 @end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad");
+    //NSLog(@"viewDidLoad");
 }
 
+// this gets called on (a) initial load and (b) return from navbar push
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"viewWillAppear");
+    //NSLog(@"viewWillAppear");
     
+    // reset everything
     self.webButton.enabled = NO;
     self.title = @"Answer";
     self.value1Text.text = nil;
@@ -40,7 +38,6 @@
 }
 
 
-#pragma mark -
 #pragma mark - Buttons
 
 
@@ -68,35 +65,24 @@
     }
     
     // if greater than 20, set background purple
-    UIColor *bg;
     if (result > 20) {
-        bg = [UIColor purpleColor];
+        self.masterView.backgroundColor = [UIColor purpleColor];
     } else {
-        bg = [UIColor whiteColor];
+        self.masterView.backgroundColor = [UIColor whiteColor];
     }
-    self.masterView.backgroundColor = bg;
-}
 
-- (IBAction)onWebButtonPressed:(UIButton *)sender {
-    NSLog(@"web button pressed");
 }
 
 
-#pragma mark -
 #pragma mark - Navigation
 
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"prepareForSegue: %@", segue.identifier);
 
+    // pass result string
     webViewController *dstVC = segue.destinationViewController;
     dstVC.myTitleString = self.title;
-}
-
-
-
-- (IBAction)back:(UIStoryboardSegue *)segue {
-    NSLog(@"back:segue");
 }
 
 @end
