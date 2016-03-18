@@ -25,7 +25,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad");
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+    
     self.webButton.enabled = NO;
+    self.title = @"Answer";
+    self.value1Text.text = nil;
+    self.value2Text.text = nil;
+    self.masterView.backgroundColor = [UIColor whiteColor];
 }
 
 
@@ -82,5 +93,10 @@
     dstVC.myTitleString = self.title;
 }
 
+
+
+- (IBAction)back:(UIStoryboardSegue *)segue {
+    NSLog(@"back:segue");
+}
 
 @end
