@@ -13,6 +13,7 @@
 		39C7DA201C9C6702005FF059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C7DA1E1C9C6702005FF059 /* Main.storyboard */; };
 		39C7DA221C9C6702005FF059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39C7DA211C9C6702005FF059 /* Assets.xcassets */; };
 		39C7DA251C9C6702005FF059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C7DA231C9C6702005FF059 /* LaunchScreen.storyboard */; };
+		39C7DA2E1C9C73A7005FF059 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C7DA2D1C9C73A7005FF059 /* webViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		39C7DA211C9C6702005FF059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39C7DA241C9C6702005FF059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39C7DA261C9C6702005FF059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39C7DA2C1C9C73A7005FF059 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		39C7DA2D1C9C73A7005FF059 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				39C7DA1B1C9C6702005FF059 /* ViewController.h */,
 				39C7DA1C1C9C6702005FF059 /* ViewController.m */,
 				39C7DA1E1C9C6702005FF059 /* Main.storyboard */,
+				39C7DA2C1C9C73A7005FF059 /* webViewController.h */,
+				39C7DA2D1C9C73A7005FF059 /* webViewController.m */,
 				39C7DA211C9C6702005FF059 /* Assets.xcassets */,
 				39C7DA231C9C6702005FF059 /* LaunchScreen.storyboard */,
 				39C7DA261C9C6702005FF059 /* Info.plist */,
@@ -152,6 +157,7 @@
 				39C7DA1D1C9C6702005FF059 /* ViewController.m in Sources */,
 				39C7DA1A1C9C6702005FF059 /* AppDelegate.m in Sources */,
 				39C7DA171C9C6702005FF059 /* main.m in Sources */,
+				39C7DA2E1C9C73A7005FF059 /* webViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
